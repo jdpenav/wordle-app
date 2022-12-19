@@ -21,9 +21,8 @@ function App() {
 
   useEffect(() => {
     generateWordSet().then((result) => {
-      result.split("\r\n")
-      wordArr(result.wordSet);
-      setWordArr(result.todaysWord);
+      wordArr = result.split("\r\n");
+      setWordArr(wordArr.todaysWord);
     });
   }, []);
 
